@@ -18,3 +18,7 @@ KeyError : You asked a dictionary for a key(label) that isn't in it
 A CSV ROW is like a dictionary while a column is like a list
 
 DAY 3 Notes (IF AND LOOP STATEMENTS)
+A loop repeats an action for every item
+An if/else makes a decision
+Combines, they let code check every item against a rule
+indentation tells item which lines belong to which block
