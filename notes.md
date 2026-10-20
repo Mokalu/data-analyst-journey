@@ -22,3 +22,16 @@ A loop repeats an action for every item
 An if/else makes a decision
 Combines, they let code check every item against a rule
 indentation tells item which lines belong to which block
+= stores a value, while == asks a question. "Are these two things equal? The answer is always true or false.
+
+DAY 4 Notes (Functions)
+Def creates a function: It is basically a set of steps saved under a name
+Defining (def apply_discount(...)) writes the function.
+Calling (apply_discount(5000,10)) runs it
+A function that is defined but never called, does nothing.
+A parameter is a placeholder for an input, like price or discount_percent. Each call fills it with real value.
+Print shows a value on the screen. Nothing comes back.
+return hands the value back so you can store it (result + apply_discount (5000, 10)) and use it later.
+
+My formula
+apply_discount returns price - price * discount_percent / 100.
