@@ -35,3 +35,28 @@ return hands the value back so you can store it (result + apply_discount (5000, 
 
 My formula
 apply_discount returns price - price * discount_percent / 100.
+
+DAY 5 NOTES: Inspecting data
+A data frame is a table of rows and columns, loaded with pd.read_csv()
+.head() shows the first five rows.
+.shape gives (rows,columns).
+.columns lists names.
+.dtypes shows types.
+.describe() gives statistics.
+.value_counts() counts how often each value appears.
+df["Column"] selects a column. A wrong name gives a KeyError. Always copy names from df.columns.
+My data: video game sales, 1034 rows and 9 columns. Most common genre: Simulation (23)
+
+DAY 6: Cleaning
+NaN means a missing value. isnull().sum() counts them per column.
+Fixes: drop rows (few affected), fill with the average (numeric, random gaps), fill with "Unknown" (text).
+Publisher had 209 missing. I filled with the "Unknown" because it is text and dropping would lose valid sales figures.
+.str.strip() removes stray spaces. drop_duplicates() removes repeated rows (mine had 0)
+to_csv("sales_clean.csv",index=False) saves the cleaned file.
+
+DAY 7 & 8 Notes:
+groupby splits the table into groups ND CALCULATES ONE NUMBER PER GROUP.
+sort_values(ascending=False) puts the biggest first.
+Filtering with df[df["Global"] > 5] keeps only matching rows.
+A new column is made by assigning to a name: df["NA_share"] = 38.829145546247396
+My findings: top genre Action, top region Europe, 23 games sold over 5
